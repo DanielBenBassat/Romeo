@@ -16,3 +16,15 @@ DEBUG | 2023-10-28 18:51:29,837 | the message: iftacj
 DEBUG | 2023-10-28 18:51:29,837 | the encrypted message 30,17,91,12,14,31
 DEBUG | 2023-10-28 18:52:46,049 | the encrypted message 30,17,91,12,14,31
 DEBUG | 2023-10-28 18:52:46,049 | the original message: iftacj
+DEBUG | 2023-10-28 19:04:04,255 | the encrypted message 30,17,91,12,14,31
+DEBUG | 2023-10-28 19:04:04,255 | the original message: iftacj
+DEBUG | 2023-10-28 19:05:48,959 | the message: Don't waste your love on somebody, who doesn't value it.
+DEBUG | 2023-10-28 19:05:48,960 | the encrypted message 59,36,35,102,91,98,94,12,90,91,16,98,96,36,92,39,98,33,36,93,16,98,36,35,98,90,36,34,16,13,36,15,96,99,98,94,19,36,98,15,36,16,90,35,102,91,98,93,12,33,92,16,98,30,91,100
+DEBUG | 2023-10-28 19:06:19,725 | the encrypted message 59,36,35,102,91,98,94,12,90,91,16,98,96,36,92,39,98,33,36,93,16,98,36,35,98,90,36,34,16,13,36,15,96,99,98,94,19,36,98,15,36,16,90,35,102,91,98,93,12,33,92,16,98,30,91,100
+DEBUG | 2023-10-28 19:06:19,725 | the original message: Don't waste your love on somebody, who doesn't value it.
+DEBUG | 2023-10-28 19:14:41,922 | the message: daniel
+DEBUG | 2023-10-28 19:14:41,923 | the encrypted message 15,12,35,30,16,33
+DEBUG | 2023-10-28 19:15:34,094 | the message: love
+DEBUG | 2023-10-28 19:15:34,095 | the encrypted message 33,36,93,16
+DEBUG | 2023-10-28 19:15:56,115 | the encrypted message 33,36,93,16
+DEBUG | 2023-10-28 19:15:56,116 | the original message: love

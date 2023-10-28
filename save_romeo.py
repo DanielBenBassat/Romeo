@@ -1,17 +1,17 @@
 """
 author: Daniel Ben-Bassat
 program name: save romeo
-description: the program gets parameter, if "encrypt" the program recivies input and encrypts it into a file
+description: the program gets parameter, if "encrypt" the program receive input and encrypts it into a file
                 if "decrypt" the program the decrypts the sentence in the file and print it
-date= 29.9.2023
+date= 28.10.2023
 """
 
 import sys
-
 import logging
 import os
 
 # constants
+
 LOG_FORMAT = '%(levelname)s | %(asctime)s | %(message)s'
 LOG_LEVEL = logging.DEBUG
 LOG_DIR = 'log'
@@ -49,7 +49,7 @@ for key, value in encrypt_dict.items():
 
 def encrypt():
     """
-    get a message and turn it into number according to incription and write it in file
+    get a message and turn it into number according to encryption and write it in file
     """
 
     message = input("enter text: ")
@@ -59,37 +59,45 @@ def encrypt():
     for i in message:
         encrypted_msg.append(str(encrypt_dict[i]))
     encrypted_msg = ",".join(encrypted_msg)
+
     logging.debug('the encrypted message ' + encrypted_msg)
 
-    file = open(r"C:\Users\User\OneDrive\מסמכים\דניאל\פייטון יא\romeo/encryped_msg.txt", "w")
+    file = open("encryped_msg.txt", "w")
     file.write(encrypted_msg)
     file.close()
 
 
 def decrypt():
     """
-    read the encrypted message from the file and turm the numbers into the massage
+    read the encrypted message from the file and turn the numbers into the original massage
     :return: the decrypted massage
     """
 
-    file = open(r"C:\Users\User\OneDrive\מסמכים\דניאל\פייטון יא\romeo/encryped_msg.txt", "r")
+    file = open("encryped_msg.txt", "r")
     encrypted_msg = file.read()
     logging.debug('the encrypted message ' + encrypted_msg)
     file.close()
     decrypted_msg = ""
     encrypted_msg = encrypted_msg.split(",")
     for i in encrypted_msg:
-        if i != '':
-            decrypted_msg += decrypt_dict[int(i)]
+        decrypted_msg += decrypt_dict[int(i)]
     logging.debug('the original message: ' + decrypted_msg)
     return decrypted_msg
 
 
 def valid_parameter():
+    """
+    return true if the parameter is correct
+    """
     return sys.argv[1] == "encrypt" or sys.argv[1] == "decrypt"
 
 
 def check_encrypt(msg):
+    """
+    encrypted a message for the assert checks
+    :param msg:
+    :return: the encrypted message
+    """
     encrypted_msg_check = []
 
     for i in msg:
@@ -114,4 +122,5 @@ if __name__ == '__main__':
     if not os.path.isdir(LOG_DIR):
         os.makedirs(LOG_DIR)
     logging.basicConfig(format=LOG_FORMAT, filename=LOG_FILE, level=LOG_LEVEL)
+
     main()
